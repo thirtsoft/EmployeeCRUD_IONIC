@@ -9,12 +9,29 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./Employee/employee-details/employee-details.module').then(m => m.EmployeeDetailsPageModule)
   },
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  },
+  {
+    path: 'AddEmployee',
+    loadChildren: () => import('./Employee/add-employee/add-employee.module').then(m  => m.AddEmployeePageModule)
+  },
+  {
+    path: 'UpdateEmployee/:id',
+    loadChildren: () => import('./Employee/add-employee/add-employee.module').then(m  => m.AddEmployeePageModule)
+  },
+  {
+    path: 'employee-details',
+    loadChildren: () => import('./Employee/employee-details/employee-details.module').then( m => m.EmployeeDetailsPageModule)
+  },
+  {
+    path: 'add-employee',
+    loadChildren: () => import('./Employee/add-employee/add-employee.module').then( m => m.AddEmployeePageModule)
+  },
+  
 ];
 
 @NgModule({
